@@ -4,10 +4,10 @@ def count_tool_use(model_name: str, instance_id: str) -> dict: # This cannot be 
 def locate_navigation(model_name: str, instance_id: str) -> list[int]: # This cannot be changed
   pass
 
-def locate_generated_tests(model_name: str, instance_id: str) -> dict: # This cannot be changed
+def locate_generated_tests(model_name: str, instance_id: str) -> list[dict]: # This cannot be changed
   pass
 
-def count_fail_to_pass(model_name: str, instance_id: str) -> list[dict]: # This cannot be changed
+def count_fail_to_pass(model_name: str, instance_id: str) -> dict: # This cannot be changed
   pass
 
 def plot_violin(): # You can change the signature of this function if you want to pass in arguments
