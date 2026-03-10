@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trajectory-analysis"
+version = "0.1.0"
+description = "Trajectory analysis tools for SWE-agent and OpenHands"
+requires-python = ">=3.8"
+dependencies = [
+    "bashlex",
+    "matplotlib",
+    "networkx",
+    "numpy",
+    "pandas",
+    "pyyaml",
+    "datasets",
+    "pygraphviz",
+    "gsppy",
+    "scipy"
+]
+
+[tool.setuptools]
+packages = ["graph_construction", "graph_analysis", "lang_construction"]
