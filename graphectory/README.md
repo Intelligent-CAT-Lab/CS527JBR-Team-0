@@ -20,6 +20,7 @@ Graphectory transforms agent execution traces into structured graphs that captur
 
 cd graphectory
 python -m pip install -e .
+conda install -c conda-forge pygraphviz # if you can't install pygraphviz try this command
 ```
 
 We recommend using conda or virtual environments (python>=3.8) to manage dependencies.
