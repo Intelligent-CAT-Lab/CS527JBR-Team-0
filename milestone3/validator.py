@@ -20,7 +20,11 @@ def read_spreadsheet() -> dict[str, list[str]]:
     result: dict[str, list[str]] = {}
     for row in reader:
         group_id = int(row["group_id"])
-        entry = f"{row['model']}-{row['instance']}"
+        if row['model'] == "gpt5_mini":
+            model_name = "gpt-5-mini"
+        elif row['model'] == "deepseek_v3":
+            model_name = "deepseek-v3"
+        entry = f"{model_name}-{row['instance']}"
         result.setdefault(group_id, []).append(entry)
     return result
 
