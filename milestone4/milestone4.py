@@ -1,4 +1,4 @@
-def extract_phase_sequences(model_name: str, instance_id: str) -> []:
+def extract_phase_sequences(model_name: str, instance_id: str) -> list:
     pass
 
 def shortcuts_backtracks_detection(model_name: str, instance_id: str) -> dict:
