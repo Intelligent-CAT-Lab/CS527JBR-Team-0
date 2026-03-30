@@ -21,8 +21,8 @@ class TrajectoryGraphAnalyzer:
         mf_node = self.get_most_frequent_node()
         return {
             "node_count": self.graph.number_of_nodes(),
-            "exec_edge_count": len(self.get_exec_edges()),
-            "hier_edge_count": len(self.get_hier_edges()),
+            "exec_edge_count": len(self.get_exec_edges()), ## Temporal Edge Count
+            "hier_edge_count": len(self.get_hier_edges()), ## Structural Edge Count
             "step_count": self.get_step_count(),
             "longest_path": self.get_longest_prime_path(),
             "avg_out_degree": self.get_avg_out_degree(),
@@ -293,7 +293,7 @@ class TrajectoryGraphAnalyzer:
         - repeated_view: True if any localization node is revisited
         - max_view_depth: deepest hierarchical level visited
         - avg_view_depth: average view depth
-        - max_view_span: largest number of nodes viewed at same hierarchical level
+        - max_view_span: largest number of nodes viewed at same hierarchical level (StructuralBreadth)
         - avg_view_span: average number of nodes viewed per level
         - scroll_behavior: True if overlapping views within same file
         - num_deep_zooms_without_edit: count of leaf nodes explored without edits
